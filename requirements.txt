@@ -1,4 +1,4 @@
 flask==1.1.1
-json==2.0.9
+json
 pandas==1.0.1
 boto3==1.16.25
