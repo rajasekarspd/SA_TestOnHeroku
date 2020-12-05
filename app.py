@@ -12,7 +12,7 @@ def home():
 @app.route('/SA', methods=['GET'])
 def Perform_SentimetnAnalysis():
     notes='This is good to do testing on comprehend for sentiment analysis.'
-    client = boto3.client(service_name='comprehend')
+    client = boto3.client(service_name='comprehend', region_name='us-west-2')
     sentiment_output = client.detect_sentiment(Text=notes, LanguageCode='en')
     return sentiment_output
 
